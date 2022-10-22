@@ -1,0 +1,101 @@
+/* HOME.EJS STYLES */
+.welcomehome{
+    color: #6495ed;
+    font-size: 65px;
+    text-align-last: center;
+    position: relative;
+    top: 120px;
+}
+
+.iam{
+    font-weight: 800;
+    font-size: 65px;
+    text-align-last: center;
+    position: relative;
+    top: 150px;
+}
+.intro{
+    font-size: 25px;
+    text-align-last: center;
+    position: relative;
+    top: 200px;
+    font-family: 'Pacifico', cursive;
+}
+.phome{
+    font-size: 25px;
+    text-align-last: center;
+    position: relative;
+    top: 250px;
+}
+.homebutton{
+background-color: #1549aa; 
+color: white;
+}
+
+/* ABOUT.EJS STYLES */
+
+.mepic{
+height:532px;
+width:284px;
+float: left; 
+margin: 5px;
+}
+.aboutme{
+color: #6495ed;
+font-size: 65px;
+margin-top: 60px;
+text-align-last: center;
+}
+
+.aboutp{
+font-size: 25px;
+font-family: 'Pacifico', cursive;
+font-stretch: ultra-condensed;
+text-align-last: center;
+margin-top: 60px;
+}
+.aboutbutton,.resumebutton{
+float: left;
+margin: 3px;
+background-color: #1549aa; 
+margin-left: 560px;
+color: white;
+}
+
+
+/* PROJECTS.EJS STYLES */
+
+.guesslabel{
+background-color: white; 
+color: steelblue; 
+font-weight: 900;
+}
+
+.guessbttn{
+background-color:#1549aa; 
+color: white;
+}
+
+.nativitylabel{
+background-color: white; 
+color: steelblue; 
+font-weight: 900;
+}
+
+.nativitybttn{
+background-color: #1549aa;
+ color: white;
+}
+
+.weatherlabel{
+background-color: white;
+color: steelblue;
+font-weight: 900;        
+}
+.weatherbttn{
+background-color: #1549aa; 
+color: white;          
+}
+
+
+
