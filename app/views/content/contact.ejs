@@ -14,12 +14,14 @@
   <br>
   <p style="font-weight: bolder; position: relative; text-align:center; "> ✍️ Fill the contact form below for direct communication</p>
   <div class="container">
-    <form action="/action_page.php">
+    <form id="contact-form" action="/action_page.php">
       <label for="fname">First Name</label>
       <input
         type="text"
         id="fname"
         name="firstname"
+        required
+        value=""
         placeholder="Your name.."
       />
 
@@ -28,7 +30,10 @@
         type="text"
         id="lname"
         name="lastname"
+        required
+        value=""
         placeholder="Your last name.."
+        
       />
 
       <label for="email">Email</label>
@@ -36,13 +41,18 @@
         type="text"
         id="email"
         name="email"
+        required
+        value=""
         placeholder="Your last email.."
+        
       />
 
       <label for="subject">Your Message</label>
       <textarea
         id="subject"
         name="subject"
+        required
+        value=""
         placeholder="Type here.."
         style="height: 200px"
       >
@@ -59,15 +69,29 @@
 </body>
 
 <script>
-  function Submit()
-  {
-    Erase();
-    Swal.fire({
-    title: 'Thank you!'+' I will reach out to you asap ⌛',
-    text: '',
-    icon: "success",
-    confirmButtonText: 'OK'
-  })
+  function Submit() {
+    // Get the form element
+    const form = document.getElementById("contact-form");
+
+    // Check if any of the required fields are empty
+    if (form.checkValidity()) {
+      // If the form is valid, reset the fields and display a success message
+      Erase();
+      Swal.fire({
+        title: "Thank you!" + " I will reach out to you asap ⌛",
+        text: "",
+        icon: "success",
+        confirmButtonText: "OK",
+      });
+    } else {
+      // If the form is invalid, display an error message
+      Swal.fire({
+        title: "Oops!",
+        text: "Please fill out all of the fields before submitting the form.",
+        icon: "error",
+        confirmButtonText: "OK",
+      });
+    }
   }
   
   <!-- Function to erase the inputs and the text area  -->
