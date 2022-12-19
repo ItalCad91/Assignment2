@@ -1,9 +1,5 @@
 /*
-  Name: Riccardo Reali
-  Student ID:301242893
-  Course: COMP229
-  Date: 2022-10-21
-  Assignment 2
+  Author: Riccardo Reali
 */
 
 import debug from "debug";

@@ -10,7 +10,7 @@
 <div class="container">
     <h1>Contact List</h1>
     <% if(displayName) { %>
-    <a href="/movie-add" class="btn btn-primary" role="button">
+    <a href="/contacts-add" class="btn btn-primary" role="button">
         <i class="fas fa-plus-circle"></i> Add a new contact</a>
     <% } %>
     <div class="row">
@@ -20,33 +20,35 @@
                 <thead class="table-dark">
                     <tr>
                         <th scope="col" class="text-center">#</th>
-                        <th scope="col">ID</th>
+                        <th scope="col">companyName</th>
                         <th scope="col">Name</th>
+                        <th scope="col">Email</th>
                         <th scope="col">Phone Number</th>
-                        <th scope="col">E-mail</th>
+                        <th scope="col">Message</th>
                         <th></th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody id="movieList">
                     <!-- Repeatable Rows -->
-                    <% for(let count = 0; count < movies.length; count++) { %>
+                    <% for(let count = 0; count < contacts.length; count++) { %>
                         <tr>
                             <th scope="row" class="text-center"><%= count + 1 %></th>
-                            <td><%= movies[count].name %></td>
-                            <td><%= movies[count].year %></td>
-                            <td><%= movies[count].director %></td>
-                            <td><%= movies[count].genre %></td>
+                            <td><%= contacts[count].companyName %></td>
+                            <td><%= contacts[count].name %></td>
+                            <td><%= contacts[count].email %></td>
+                            <td><%= contacts[count].phoneNumber %></td>
+                             <td><%= contacts[count].message %></td>
                             <% if(displayName) { %>
                             
                             <td class="text-center col-1">
-                                <a href="/movie-edit/<%= movies[count]._id %>"
+                                <a href="/contacts-edit/<%= contacts[count]._id %>"
                                     class="btn btn-primary btn-sm">
                                     <i class="fas fa-pencil-alt"></i> Edit</a>
                             </td>
                             
                             <td class="text-center col-1">
-                                <a href="/movie-delete/<%= movies[count]._id %>"
+                                <a href="/contacts-delete/<%= contacts[count]._id %>"
                                     class="btn btn-danger btn-sm">
                                     <i class="fas fa-trash-alt"></i> Delete</a>
                             </td>

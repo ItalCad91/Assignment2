@@ -12,14 +12,14 @@
             <h1>Add new contact</h1>
 
             <form class="form" method="POST">
-                <input type="hidden" name="id" value="<%= movie._id %>" >
+                <input type="hidden" name="id" value="<%= contact._id %>" >
                 <div class="form-group">
-                    <label for="nameTextField">ID</label>
+                    <label for="nameTextField">Company Name</label>
                     <input type="text" class="form-control"
                     id="nameTextField"
-                    placeholder="Enter the person's ID"
+                    placeholder="Enter company's name"
                     name="name" 
-                    value="<%= movie.name %>"
+                    value="<%= contact.companyName %>"
                     required>
                 </div>
 
@@ -29,27 +29,39 @@
                     id="authorTextField"
                     placeholder="Enter Name"
                     name="year" 
-                    value="<%= movie.year %>"
+                    value="<%= contact.name %>"
                     required>
                 </div>
 
                 <div class="form-group">
-                    <label for="publishedTextField">Phone Number</label>
-                    <input type="number" class="form-control"
-                    id="publishedTextField"
-                    placeholder="Enter person's phone number"
-                    name="director" 
-                    value="<%= movie.director %>"
-                    required>
-                </div>
-
-                <div class="form-group">
-                    <label for="descriptionTextArea">E-mail</label>
+                    <label for="publishedTextField">Email</label>
                     <input type="text" class="form-control"
+                    id="publishedTextField"
+                    placeholder="Enter person's email"
+                    name="director" 
+                    value="<%= contact.email %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descriptionTextArea">Phone Number</label>
+                    <input type="number" class="form-control"
                     id="descriptionTextArea"
                     placeholder="Enter email"
                     name="genre"                     
-                    value="<%= movie.genre %>"
+                    value="<%= contact.phoneNumber %>"
+                    required
+                    >
+                    </input>
+                </div>
+
+                <div class="form-group">
+                    <label for="descriptionTextArea">Message</label>
+                    <input type="text" class="form-control"
+                    id="descriptionTextArea"
+                    placeholder="Leave a quick message"
+                    name="genre"                     
+                    value="<%= contact.message %>"
                     required
                     >
                     </input>
@@ -58,7 +70,7 @@
                 <button class="btn btn-primary" type="submit">
                     <i class="fas fa-edit"></i> Submit</button>
                 
-                    <a href="/movie-list" class="btn btn-warning">
+                    <a href="/contacts-list" class="btn btn-warning">
                         <i class="fas fa-undo"></i> Cancel</a>
 
             </form>
