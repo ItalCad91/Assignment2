@@ -1,10 +1,9 @@
 /*
-  Name: Riccardo Reali
-  Student ID:301242893
-  Course: COMP229
+  Author: Riccardo Reali
   Date: 2022-10-21
-  Assignment 2
 */
+
+
 export function UserDisplayName(req){
     if(req.user){
         return req.user.displayName;

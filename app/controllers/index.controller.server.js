@@ -1,3 +1,9 @@
+/*
+  Author: Riccardo Reali
+  Date: 2022-10-21
+*/
+
+
 import { UserDisplayName } from "../utils/index.js";
 
 export function displayHomePage(req, res, next) {
